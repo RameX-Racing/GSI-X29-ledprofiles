@@ -1,0 +1,2663 @@
+{
+  "TestLedsGameData": {
+    "GearEx": 0,
+    "FuelMax": 100.0,
+    "RPMSMax": 10000.0,
+    "TurboMax": 3.5,
+    "TurnIndicatorLeftEnabled": false,
+    "TurnIndicatorRightEnabled": false,
+    "SessionBestDeltaEx": 0.0,
+    "AllTimeBestDeltaEx": 0.0,
+    "DRSEnabled": false,
+    "DRSAvailable": false,
+    "MaxRpm": 10000.0,
+    "GameRunning": true,
+    "Brake": 0.0,
+    "GameName": "IRacing",
+    "Fuel": 0.0,
+    "RPMPercent": 100.0,
+    "RPMRedlineReached": true,
+    "SpeedKmh": 0.0,
+    "SpeedMph": 0.0,
+    "Turbo": 0.0,
+    "TurboPercent": 0.0,
+    "Gear": "N",
+    "IsInPitLane": false,
+    "PitLimiterOn": false,
+    "AbsEnabled": false,
+    "AbsActive": false,
+    "TCEnabled": false,
+    "TCActive": false,
+    "LowFuelAlert": false,
+    "SpotterCarLeft": true,
+    "SpotterCarRight": false,
+    "BlackFlag": false,
+    "YellowFlag": false,
+    "WhiteFlag": false,
+    "BlueFlag": true,
+    "GreenFlag": false,
+    "CarModel": "Dallara F312 F3",
+    "CarStartedTime": "2023-08-04T22:56:46.3009898+03:00",
+    "SessionBestDelta": 0.0,
+    "AllTimeBestDelta": 0.0
+  },
+  "LedContainers": [
+    {
+      "ClearBackgroundWhenActive": false,
+      "LedContainers": [
+        {
+          "LedContainers": [
+            {
+              "TriggerFormula": {
+                "Expression": "if(([DataCorePlugin.CurrentGame]='IRacing'),1,0)"
+              },
+              "ClearBackgroundWhenActive": false,
+              "LedContainers": [
+                {
+                  "TriggerFormula": {
+                    "Expression": "[InputStatus.JoystickPlugin.GSI_X29_-_simOS_B06]=1"
+                  },
+                  "ClearBackgroundWhenActive": false,
+                  "LedContainers": [
+                    {
+                      "LedCount": 2,
+                      "Color": "Lime",
+                      "BlinkEnabled": false,
+                      "BlinkDelay": 500,
+                      "DualBlinkTimingEnabled": false,
+                      "OffDelay": 750,
+                      "OnDelay": 125,
+                      "StartPosition": 1,
+                      "ContainerId": "4707cd47-909f-4626-9c2f-c630f8f1f5df",
+                      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.StaticColorContainer",
+                      "Description": "Generates a static light effect",
+                      "IsEnabled": true
+                    }
+                  ],
+                  "StackLeftToRight": false,
+                  "StartPosition": 13,
+                  "ContainerId": "db236865-5a18-4c48-916b-a09c84db3288",
+                  "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+                  "Description": "Radio Active",
+                  "IsEnabled": true
+                },
+                {
+                  "TriggerFormula": {
+                    "Expression": "if(([EngineIgnitionOn]=1&&[EngineStarted]=0),1,0)"
+                  },
+                  "ClearBackgroundWhenActive": false,
+                  "LedContainers": [
+                    {
+                      "LedCount": 1,
+                      "Color": "Blue",
+                      "BlinkEnabled": false,
+                      "BlinkDelay": 500,
+                      "DualBlinkTimingEnabled": false,
+                      "OffDelay": 750,
+                      "OnDelay": 125,
+                      "StartPosition": 6,
+                      "ContainerId": "c7a6de7e-18a8-43ea-874a-cd3da6d48868",
+                      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.StaticColorContainer",
+                      "Description": "Engine Active",
+                      "IsEnabled": true
+                    },
+                    {
+                      "LedCount": 1,
+                      "Color": "Blue",
+                      "BlinkEnabled": false,
+                      "BlinkDelay": 500,
+                      "DualBlinkTimingEnabled": false,
+                      "OffDelay": 750,
+                      "OnDelay": 125,
+                      "StartPosition": 16,
+                      "ContainerId": "f3599750-8c09-4cfe-b21e-8660cbdae277",
+                      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.StaticColorContainer",
+                      "Description": "Engine Active copy",
+                      "IsEnabled": true
+                    }
+                  ],
+                  "StackLeftToRight": false,
+                  "StartPosition": 1,
+                  "ContainerId": "0b5be84b-4cfd-4b9b-bdb5-6fe7b3a86cf5",
+                  "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+                  "Description": "When Ignition is on only",
+                  "IsEnabled": true
+                },
+                {
+                  "TriggerFormula": {
+                    "Expression": "if(([EngineIgnitionOn]=1&&[EngineStarted]=1),1,0)"
+                  },
+                  "ClearBackgroundWhenActive": true,
+                  "LedContainers": [
+                    {
+                      "LedCount": 1,
+                      "Color": "Lime",
+                      "BlinkEnabled": false,
+                      "BlinkDelay": 500,
+                      "DualBlinkTimingEnabled": false,
+                      "OffDelay": 750,
+                      "OnDelay": 125,
+                      "StartPosition": 7,
+                      "ContainerId": "2a420a4f-e672-4128-a879-11c8ae34067c",
+                      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.StaticColorContainer",
+                      "Description": "LED 5&6 Green",
+                      "IsEnabled": false
+                    },
+                    {
+                      "LedCount": 1,
+                      "Color": "Lime",
+                      "BlinkEnabled": false,
+                      "BlinkDelay": 500,
+                      "DualBlinkTimingEnabled": false,
+                      "OffDelay": 750,
+                      "OnDelay": 125,
+                      "StartPosition": 17,
+                      "ContainerId": "3240cacb-3998-453b-bb4c-5e2be5f4a3cd",
+                      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.StaticColorContainer",
+                      "Description": "LED 5&6 Green copy",
+                      "IsEnabled": false
+                    },
+                    {
+                      "LedContainers": [
+                        {
+                          "TriggerFormula": {
+                            "Expression": "if([Flag_White]>0,1, 0)"
+                          },
+                          "ClearBackgroundWhenActive": false,
+                          "LedContainers": [
+                            {
+                              "LedCount": 2,
+                              "Color": "White",
+                              "BlinkEnabled": false,
+                              "BlinkDelay": 500,
+                              "DualBlinkTimingEnabled": false,
+                              "OffDelay": 750,
+                              "OnDelay": 125,
+                              "StartPosition": 9,
+                              "ContainerId": "f3299c13-9334-4802-8c6f-5998bd4251a6",
+                              "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.StaticColorContainer",
+                              "Description": "LED 9&10 White",
+                              "IsEnabled": true
+                            },
+                            {
+                              "LedCount": 2,
+                              "Color": "White",
+                              "BlinkEnabled": false,
+                              "BlinkDelay": 500,
+                              "DualBlinkTimingEnabled": false,
+                              "OffDelay": 750,
+                              "OnDelay": 125,
+                              "StartPosition": 19,
+                              "ContainerId": "279c922e-47f4-4658-b068-684f0cddda85",
+                              "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.StaticColorContainer",
+                              "Description": "LED 19&20 White",
+                              "IsEnabled": true
+                            }
+                          ],
+                          "StackLeftToRight": false,
+                          "StartPosition": 1,
+                          "ContainerId": "b3d6a2c6-19eb-4c61-be8e-77314fb2bdcc",
+                          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+                          "Description": "White Flag",
+                          "IsEnabled": true
+                        },
+                        {
+                          "TriggerFormula": {
+                            "Expression": "if([Flag_Blue]>0,1, 0)"
+                          },
+                          "ClearBackgroundWhenActive": false,
+                          "LedContainers": [
+                            {
+                              "LedCount": 2,
+                              "Color": "Blue",
+                              "BlinkEnabled": false,
+                              "BlinkDelay": 500,
+                              "DualBlinkTimingEnabled": false,
+                              "OffDelay": 750,
+                              "OnDelay": 125,
+                              "StartPosition": 9,
+                              "ContainerId": "2d133c5d-003b-443c-b7e0-33a8089bcd0b",
+                              "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.StaticColorContainer",
+                              "Description": "LED 9&10 Blue",
+                              "IsEnabled": true
+                            },
+                            {
+                              "LedCount": 2,
+                              "Color": "Blue",
+                              "BlinkEnabled": false,
+                              "BlinkDelay": 500,
+                              "DualBlinkTimingEnabled": false,
+                              "OffDelay": 750,
+                              "OnDelay": 125,
+                              "StartPosition": 19,
+                              "ContainerId": "43e84f70-3481-43ae-963d-cde3404154af",
+                              "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.StaticColorContainer",
+                              "Description": "LED 19&20 Blue",
+                              "IsEnabled": true
+                            }
+                          ],
+                          "StackLeftToRight": false,
+                          "StartPosition": 1,
+                          "ContainerId": "bab74968-36fd-48df-ad7c-3b7ab27f4160",
+                          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+                          "Description": "Blue Flag",
+                          "IsEnabled": true
+                        },
+                        {
+                          "TriggerFormula": {
+                            "Expression": "if([Flag_Yellow]>0,1, 0)"
+                          },
+                          "ClearBackgroundWhenActive": false,
+                          "LedContainers": [
+                            {
+                              "LedCount": 2,
+                              "Color": "Yellow",
+                              "BlinkEnabled": false,
+                              "BlinkDelay": 500,
+                              "DualBlinkTimingEnabled": false,
+                              "OffDelay": 750,
+                              "OnDelay": 125,
+                              "StartPosition": 1,
+                              "ContainerId": "7fbb5327-8cd4-4e76-981c-47fcc3e2e8c5",
+                              "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.StaticColorContainer",
+                              "Description": "LED 1&2 Yellow",
+                              "IsEnabled": true
+                            },
+                            {
+                              "LedCount": 2,
+                              "Color": "Yellow",
+                              "BlinkEnabled": false,
+                              "BlinkDelay": 500,
+                              "DualBlinkTimingEnabled": false,
+                              "OffDelay": 750,
+                              "OnDelay": 125,
+                              "StartPosition": 11,
+                              "ContainerId": "26b91523-1cdd-4ca4-9bc7-faa7fe0a7dcc",
+                              "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.StaticColorContainer",
+                              "Description": "LED 11&12 Yellow",
+                              "IsEnabled": true
+                            }
+                          ],
+                          "StackLeftToRight": false,
+                          "StartPosition": 1,
+                          "ContainerId": "0b11b78b-5793-4636-82a7-ef3ee1d4e9b7",
+                          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+                          "Description": "Yellow Flag",
+                          "IsEnabled": true
+                        },
+                        {
+                          "TriggerFormula": {
+                            "Expression": "if([Flag_Orange]>0,1, 0)"
+                          },
+                          "ClearBackgroundWhenActive": false,
+                          "LedContainers": [
+                            {
+                              "Animation": {
+                                "Columns": 10,
+                                "Rows": 2,
+                                "TotalDuration": 1000,
+                                "Frames": [
+                                  {
+                                    "FrameId": "c8daca82-f0a3-4742-8d18-769d577dc949",
+                                    "Colors": {
+                                      "0": {
+                                        "0": {
+                                          "X": 0,
+                                          "Y": 0,
+                                          "Color": "Transparent"
+                                        },
+                                        "1": {
+                                          "X": 1,
+                                          "Y": 0,
+                                          "Color": "Transparent"
+                                        },
+                                        "2": {
+                                          "X": 2,
+                                          "Y": 0,
+                                          "Color": "Transparent"
+                                        },
+                                        "3": {
+                                          "X": 3,
+                                          "Y": 0,
+                                          "Color": "Transparent"
+                                        },
+                                        "4": {
+                                          "X": 4,
+                                          "Y": 0,
+                                          "Color": "199, 79, 0"
+                                        },
+                                        "5": {
+                                          "X": 5,
+                                          "Y": 0,
+                                          "Color": "199, 79, 0"
+                                        },
+                                        "6": {
+                                          "X": 6,
+                                          "Y": 0,
+                                          "Color": "Transparent"
+                                        },
+                                        "7": {
+                                          "X": 7,
+                                          "Y": 0,
+                                          "Color": "Transparent"
+                                        },
+                                        "8": {
+                                          "X": 8,
+                                          "Y": 0,
+                                          "Color": "Transparent"
+                                        },
+                                        "9": {
+                                          "X": 9,
+                                          "Y": 0,
+                                          "Color": "Transparent"
+                                        },
+                                        "10": {
+                                          "X": 10,
+                                          "Y": 0,
+                                          "Color": "199, 79, 0"
+                                        },
+                                        "11": {
+                                          "X": 11,
+                                          "Y": 0,
+                                          "Color": "199, 79, 0"
+                                        },
+                                        "12": {
+                                          "X": 12,
+                                          "Y": 0,
+                                          "Color": "199, 79, 0"
+                                        },
+                                        "13": {
+                                          "X": 13,
+                                          "Y": 0,
+                                          "Color": "199, 79, 0"
+                                        },
+                                        "14": {
+                                          "X": 14,
+                                          "Y": 0,
+                                          "Color": "199, 79, 0"
+                                        },
+                                        "15": {
+                                          "X": 15,
+                                          "Y": 0,
+                                          "Color": "199, 79, 0"
+                                        },
+                                        "16": {
+                                          "X": 16,
+                                          "Y": 0,
+                                          "Color": "199, 79, 0"
+                                        },
+                                        "17": {
+                                          "X": 17,
+                                          "Y": 0,
+                                          "Color": "199, 79, 0"
+                                        },
+                                        "18": {
+                                          "X": 18,
+                                          "Y": 0,
+                                          "Color": "199, 79, 0"
+                                        },
+                                        "19": {
+                                          "X": 19,
+                                          "Y": 0,
+                                          "Color": "199, 79, 0"
+                                        }
+                                      },
+                                      "1": {
+                                        "0": {
+                                          "X": 0,
+                                          "Y": 1,
+                                          "Color": "Transparent"
+                                        },
+                                        "1": {
+                                          "X": 1,
+                                          "Y": 1,
+                                          "Color": "Transparent"
+                                        },
+                                        "2": {
+                                          "X": 2,
+                                          "Y": 1,
+                                          "Color": "Transparent"
+                                        },
+                                        "3": {
+                                          "X": 3,
+                                          "Y": 1,
+                                          "Color": "Transparent"
+                                        },
+                                        "4": {
+                                          "X": 4,
+                                          "Y": 1,
+                                          "Color": "199, 79, 0"
+                                        },
+                                        "5": {
+                                          "X": 5,
+                                          "Y": 1,
+                                          "Color": "199, 79, 0"
+                                        },
+                                        "6": {
+                                          "X": 6,
+                                          "Y": 1,
+                                          "Color": "Transparent"
+                                        },
+                                        "7": {
+                                          "X": 7,
+                                          "Y": 1,
+                                          "Color": "Transparent"
+                                        },
+                                        "8": {
+                                          "X": 8,
+                                          "Y": 1,
+                                          "Color": "Transparent"
+                                        },
+                                        "9": {
+                                          "X": 9,
+                                          "Y": 1,
+                                          "Color": "Transparent"
+                                        }
+                                      }
+                                    },
+                                    "FrameDuration": 500
+                                  },
+                                  {
+                                    "FrameId": "0039f4ac-c691-45be-aec1-6125af9252ed",
+                                    "Colors": {
+                                      "0": {
+                                        "0": {
+                                          "X": 0,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "1": {
+                                          "X": 1,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "2": {
+                                          "X": 2,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "3": {
+                                          "X": 3,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "4": {
+                                          "X": 4,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "5": {
+                                          "X": 5,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "6": {
+                                          "X": 6,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "7": {
+                                          "X": 7,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "8": {
+                                          "X": 8,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "9": {
+                                          "X": 9,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "10": {
+                                          "X": 10,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "11": {
+                                          "X": 11,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "12": {
+                                          "X": 12,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "13": {
+                                          "X": 13,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "14": {
+                                          "X": 14,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "15": {
+                                          "X": 15,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "16": {
+                                          "X": 16,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "17": {
+                                          "X": 17,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "18": {
+                                          "X": 18,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        },
+                                        "19": {
+                                          "X": 19,
+                                          "Y": 0,
+                                          "Color": "Black"
+                                        }
+                                      },
+                                      "1": {
+                                        "0": {
+                                          "X": 0,
+                                          "Y": 1,
+                                          "Color": "Black"
+                                        },
+                                        "1": {
+                                          "X": 1,
+                                          "Y": 1,
+                                          "Color": "Black"
+                                        },
+                                        "2": {
+                                          "X": 2,
+                                          "Y": 1,
+                                          "Color": "Black"
+                                        },
+                                        "3": {
+                                          "X": 3,
+                                          "Y": 1,
+                                          "Color": "Black"
+                                        },
+                                        "4": {
+                                          "X": 4,
+                                          "Y": 1,
+                                          "Color": "Black"
+                                        },
+                                        "5": {
+                                          "X": 5,
+                                          "Y": 1,
+                                          "Color": "Black"
+                                        },
+                                        "6": {
+                                          "X": 6,
+                                          "Y": 1,
+                                          "Color": "Black"
+                                        },
+                                        "7": {
+                                          "X": 7,
+                                          "Y": 1,
+                                          "Color": "Black"
+                                        },
+                                        "8": {
+                                          "X": 8,
+                                          "Y": 1,
+                                          "Color": "Black"
+                                        },
+                                        "9": {
+                                          "X": 9,
+                                          "Y": 1,
+                                          "Color": "Black"
+                                        }
+                                      }
+                                    },
+                                    "FrameDuration": 500
+                                  }
+                                ],
+                                "SelectedFrameId": "c8daca82-f0a3-4742-8d18-769d577dc949",
+                                "PenColor": "Black"
+                              },
+                              "StartPosition": 1,
+                              "ContainerId": "c253edba-bfc4-4fd2-84bc-ecb6c842302e",
+                              "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.AnimationContainer",
+                              "Description": "Hand drawn animation/pattern",
+                              "IsEnabled": true
+                            }
+                          ],
+                          "StackLeftToRight": false,
+                          "StartPosition": 1,
+                          "ContainerId": "dedc8a5b-742d-475c-b8da-6f8d2b11cc43",
+                          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+                          "Description": "Orange Flag",
+                          "IsEnabled": true
+                        }
+                      ],
+                      "StackLeftToRight": false,
+                      "StartPosition": 1,
+                      "ContainerId": "e1c81a42-b712-4bcc-a250-27c6235deefb",
+                      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Base.GroupContainer",
+                      "Description": "Game Flags",
+                      "IsEnabled": true
+                    },
+                    {
+                      "TriggerFormula": {
+                        "Expression": "[PitLimiterOn]=0"
+                      },
+                      "ClearBackgroundWhenActive": false,
+                      "LedContainers": [
+                        {
+                          "RpmMode": 1,
+                          "OverrideMaxRPMWithRedlineValue": false,
+                          "PercentMin": 90.0,
+                          "PercentMax": 100.0,
+                          "RPMMin": 0.0,
+                          "RPMMax": 8000.0,
+                          "BlinkDelay": 250,
+                          "StartColor": "Blue",
+                          "EndColor": "Red",
+                          "GradientOnAll": false,
+                          "RightToLeft": true,
+                          "LedCount": 2,
+                          "BlinkEnabled": true,
+                          "BlinkOnLastGear": false,
+                          "UseLedDimming": true,
+                          "FillAllLeds": false,
+                          "RelativeToRedline": false,
+                          "StartPosition": 1,
+                          "ContainerId": "c6a6d98b-7070-4fe2-a0bf-05066c14b5c0",
+                          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.RPMContainer",
+                          "Description": "Left Side",
+                          "IsEnabled": true
+                        },
+                        {
+                          "TriggerFormula": {
+                            "Expression": "[IsInPitLane]=0"
+                          },
+                          "ClearBackgroundWhenActive": false,
+                          "LedContainers": [
+                            {
+                              "RpmMode": 1,
+                              "OverrideMaxRPMWithRedlineValue": false,
+                              "PercentMin": 90.0,
+                              "PercentMax": 100.0,
+                              "RPMMin": 0.0,
+                              "RPMMax": 8000.0,
+                              "BlinkDelay": 250,
+                              "StartColor": "Blue",
+                              "EndColor": "Red",
+                              "GradientOnAll": false,
+                              "RightToLeft": true,
+                              "LedCount": 2,
+                              "BlinkEnabled": true,
+                              "BlinkOnLastGear": false,
+                              "UseLedDimming": true,
+                              "FillAllLeds": false,
+                              "RelativeToRedline": false,
+                              "StartPosition": 11,
+                              "ContainerId": "a763790f-8ed3-4da4-bdaf-f4845ac0ab94",
+                              "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.RPMContainer",
+                              "Description": "Right Side",
+                              "IsEnabled": true
+                            }
+                          ],
+                          "StackLeftToRight": false,
+                          "StartPosition": 1,
+                          "ContainerId": "a2ed649e-d580-4b0a-aa59-a11aadee54a7",
+                          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+                          "Description": "Enable content based on a custom formula",
+                          "IsEnabled": true
+                        }
+                      ],
+                      "StackLeftToRight": false,
+                      "StartPosition": 1,
+                      "ContainerId": "08bb1c5b-2150-4b7c-b63d-4724f8a458b4",
+                      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+                      "Description": "RPM Lights",
+                      "IsEnabled": true
+                    },
+                    {
+                      "LedCount": 2,
+                      "Color": "Magenta",
+                      "BlinkEnabled": false,
+                      "BlinkDelay": 150,
+                      "DualBlinkTimingEnabled": false,
+                      "OffDelay": 750,
+                      "OnDelay": 125,
+                      "StartPosition": 3,
+                      "ContainerId": "fc3f8b02-1f07-4b63-8cf7-65874e0b617a",
+                      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Status.AbsActiveContainer",
+                      "Description": "LED 3&4 Pink",
+                      "IsEnabled": true
+                    },
+                    {
+                      "LedCount": 2,
+                      "Color": "Magenta",
+                      "BlinkEnabled": false,
+                      "BlinkDelay": 150,
+                      "DualBlinkTimingEnabled": false,
+                      "OffDelay": 750,
+                      "OnDelay": 125,
+                      "StartPosition": 13,
+                      "ContainerId": "6b2bd2f7-d613-400f-b284-7c37a7cb5b2d",
+                      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Status.AbsActiveContainer",
+                      "Description": "LED 13&14 Pink",
+                      "IsEnabled": true
+                    },
+                    {
+                      "LedCount": 2,
+                      "Color": "Yellow",
+                      "BlinkEnabled": false,
+                      "BlinkDelay": 500,
+                      "DualBlinkTimingEnabled": false,
+                      "OffDelay": 750,
+                      "OnDelay": 125,
+                      "StartPosition": 3,
+                      "ContainerId": "517c3e4d-fafa-4c0c-a45a-27960f43f02a",
+                      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Status.TCActiveContainer",
+                      "Description": "LED 3&4 Green",
+                      "IsEnabled": true
+                    },
+                    {
+                      "LedCount": 2,
+                      "Color": "Yellow",
+                      "BlinkEnabled": false,
+                      "BlinkDelay": 500,
+                      "DualBlinkTimingEnabled": false,
+                      "OffDelay": 750,
+                      "OnDelay": 125,
+                      "StartPosition": 13,
+                      "ContainerId": "7d9d7dd8-7360-46dd-89cb-c5c272143d29",
+                      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Status.TCActiveContainer",
+                      "Description": "LED 13&14 Green",
+                      "IsEnabled": true
+                    },
+                    {
+                      "ClearBackgroundWhenActive": false,
+                      "LedContainers": [
+                        {
+                          "Animation": {
+                            "Columns": 4,
+                            "Rows": 1,
+                            "TotalDuration": 800,
+                            "Frames": [
+                              {
+                                "FrameId": "96ed369f-92a5-4702-9d9c-4a065235b054",
+                                "Colors": {
+                                  "0": {
+                                    "0": {
+                                      "X": 0,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "1": {
+                                      "X": 1,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "2": {
+                                      "X": 2,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "3": {
+                                      "X": 3,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "4": {
+                                      "X": 4,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "5": {
+                                      "X": 5,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "6": {
+                                      "X": 6,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "7": {
+                                      "X": 7,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "8": {
+                                      "X": 8,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "9": {
+                                      "X": 9,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "10": {
+                                      "X": 10,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "11": {
+                                      "X": 11,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "12": {
+                                      "X": 12,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "13": {
+                                      "X": 13,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "14": {
+                                      "X": 14,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "15": {
+                                      "X": 15,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "16": {
+                                      "X": 16,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "17": {
+                                      "X": 17,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "18": {
+                                      "X": 18,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "19": {
+                                      "X": 19,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "20": {
+                                      "X": 20,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "21": {
+                                      "X": 21,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "22": {
+                                      "X": 22,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "23": {
+                                      "X": 23,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    }
+                                  },
+                                  "1": {
+                                    "0": {
+                                      "X": 0,
+                                      "Y": 1,
+                                      "Color": "Yellow"
+                                    },
+                                    "1": {
+                                      "X": 1,
+                                      "Y": 1,
+                                      "Color": "Yellow"
+                                    },
+                                    "2": {
+                                      "X": 2,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "3": {
+                                      "X": 3,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "4": {
+                                      "X": 4,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "5": {
+                                      "X": 5,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "6": {
+                                      "X": 6,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "7": {
+                                      "X": 7,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "8": {
+                                      "X": 8,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "9": {
+                                      "X": 9,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "10": {
+                                      "X": 10,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "11": {
+                                      "X": 11,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "12": {
+                                      "X": 12,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "13": {
+                                      "X": 13,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "14": {
+                                      "X": 14,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "15": {
+                                      "X": 15,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "16": {
+                                      "X": 16,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "17": {
+                                      "X": 17,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "18": {
+                                      "X": 18,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "19": {
+                                      "X": 19,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "20": {
+                                      "X": 20,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "21": {
+                                      "X": 21,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "22": {
+                                      "X": 22,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "23": {
+                                      "X": 23,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    }
+                                  }
+                                },
+                                "FrameDuration": 400
+                              },
+                              {
+                                "FrameId": "42cb2fa3-7b76-4c69-8db8-da298a8b9d30",
+                                "Colors": {
+                                  "0": {
+                                    "0": {
+                                      "X": 0,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "1": {
+                                      "X": 1,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "2": {
+                                      "X": 2,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "3": {
+                                      "X": 3,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "4": {
+                                      "X": 4,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "5": {
+                                      "X": 5,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "6": {
+                                      "X": 6,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "7": {
+                                      "X": 7,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "8": {
+                                      "X": 8,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "9": {
+                                      "X": 9,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "10": {
+                                      "X": 10,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "11": {
+                                      "X": 11,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "12": {
+                                      "X": 12,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "13": {
+                                      "X": 13,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "14": {
+                                      "X": 14,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "15": {
+                                      "X": 15,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "16": {
+                                      "X": 16,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "17": {
+                                      "X": 17,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "18": {
+                                      "X": 18,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "19": {
+                                      "X": 19,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "20": {
+                                      "X": 20,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "21": {
+                                      "X": 21,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "22": {
+                                      "X": 22,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "23": {
+                                      "X": 23,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    }
+                                  },
+                                  "1": {
+                                    "0": {
+                                      "X": 0,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "1": {
+                                      "X": 1,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "2": {
+                                      "X": 2,
+                                      "Y": 1,
+                                      "Color": "Yellow"
+                                    },
+                                    "3": {
+                                      "X": 3,
+                                      "Y": 1,
+                                      "Color": "Yellow"
+                                    },
+                                    "4": {
+                                      "X": 4,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "5": {
+                                      "X": 5,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "6": {
+                                      "X": 6,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "7": {
+                                      "X": 7,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "8": {
+                                      "X": 8,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "9": {
+                                      "X": 9,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "10": {
+                                      "X": 10,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "11": {
+                                      "X": 11,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "12": {
+                                      "X": 12,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "13": {
+                                      "X": 13,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "14": {
+                                      "X": 14,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "15": {
+                                      "X": 15,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "16": {
+                                      "X": 16,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "17": {
+                                      "X": 17,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "18": {
+                                      "X": 18,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "19": {
+                                      "X": 19,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "20": {
+                                      "X": 20,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "21": {
+                                      "X": 21,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "22": {
+                                      "X": 22,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "23": {
+                                      "X": 23,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    }
+                                  }
+                                },
+                                "FrameDuration": 400
+                              }
+                            ],
+                            "SelectedFrameId": "42cb2fa3-7b76-4c69-8db8-da298a8b9d30",
+                            "PenColor": "Yellow"
+                          },
+                          "StartPosition": 1,
+                          "ContainerId": "08cbfd98-d989-4683-aa35-be8232053a48",
+                          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.AnimationContainer",
+                          "Description": "Hand drawn animation/pattern",
+                          "IsEnabled": true
+                        },
+                        {
+                          "Animation": {
+                            "Columns": 4,
+                            "Rows": 1,
+                            "TotalDuration": 800,
+                            "Frames": [
+                              {
+                                "FrameId": "96ed369f-92a5-4702-9d9c-4a065235b054",
+                                "Colors": {
+                                  "0": {
+                                    "0": {
+                                      "X": 0,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "1": {
+                                      "X": 1,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "2": {
+                                      "X": 2,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "3": {
+                                      "X": 3,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "4": {
+                                      "X": 4,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "5": {
+                                      "X": 5,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "6": {
+                                      "X": 6,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "7": {
+                                      "X": 7,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "8": {
+                                      "X": 8,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "9": {
+                                      "X": 9,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "10": {
+                                      "X": 10,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "11": {
+                                      "X": 11,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "12": {
+                                      "X": 12,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "13": {
+                                      "X": 13,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "14": {
+                                      "X": 14,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "15": {
+                                      "X": 15,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "16": {
+                                      "X": 16,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "17": {
+                                      "X": 17,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "18": {
+                                      "X": 18,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "19": {
+                                      "X": 19,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "20": {
+                                      "X": 20,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "21": {
+                                      "X": 21,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "22": {
+                                      "X": 22,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "23": {
+                                      "X": 23,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    }
+                                  },
+                                  "1": {
+                                    "0": {
+                                      "X": 0,
+                                      "Y": 1,
+                                      "Color": "Yellow"
+                                    },
+                                    "1": {
+                                      "X": 1,
+                                      "Y": 1,
+                                      "Color": "Yellow"
+                                    },
+                                    "2": {
+                                      "X": 2,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "3": {
+                                      "X": 3,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "4": {
+                                      "X": 4,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "5": {
+                                      "X": 5,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "6": {
+                                      "X": 6,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "7": {
+                                      "X": 7,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "8": {
+                                      "X": 8,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "9": {
+                                      "X": 9,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "10": {
+                                      "X": 10,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "11": {
+                                      "X": 11,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "12": {
+                                      "X": 12,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "13": {
+                                      "X": 13,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "14": {
+                                      "X": 14,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "15": {
+                                      "X": 15,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "16": {
+                                      "X": 16,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "17": {
+                                      "X": 17,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "18": {
+                                      "X": 18,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "19": {
+                                      "X": 19,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "20": {
+                                      "X": 20,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "21": {
+                                      "X": 21,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "22": {
+                                      "X": 22,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "23": {
+                                      "X": 23,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    }
+                                  }
+                                },
+                                "FrameDuration": 400
+                              },
+                              {
+                                "FrameId": "42cb2fa3-7b76-4c69-8db8-da298a8b9d30",
+                                "Colors": {
+                                  "0": {
+                                    "0": {
+                                      "X": 0,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "1": {
+                                      "X": 1,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "2": {
+                                      "X": 2,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "3": {
+                                      "X": 3,
+                                      "Y": 0,
+                                      "Color": "Yellow"
+                                    },
+                                    "4": {
+                                      "X": 4,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "5": {
+                                      "X": 5,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "6": {
+                                      "X": 6,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "7": {
+                                      "X": 7,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "8": {
+                                      "X": 8,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "9": {
+                                      "X": 9,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "10": {
+                                      "X": 10,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "11": {
+                                      "X": 11,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "12": {
+                                      "X": 12,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "13": {
+                                      "X": 13,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "14": {
+                                      "X": 14,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "15": {
+                                      "X": 15,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "16": {
+                                      "X": 16,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "17": {
+                                      "X": 17,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "18": {
+                                      "X": 18,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "19": {
+                                      "X": 19,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "20": {
+                                      "X": 20,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "21": {
+                                      "X": 21,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "22": {
+                                      "X": 22,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "23": {
+                                      "X": 23,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    }
+                                  },
+                                  "1": {
+                                    "0": {
+                                      "X": 0,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "1": {
+                                      "X": 1,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "2": {
+                                      "X": 2,
+                                      "Y": 1,
+                                      "Color": "Yellow"
+                                    },
+                                    "3": {
+                                      "X": 3,
+                                      "Y": 1,
+                                      "Color": "Yellow"
+                                    },
+                                    "4": {
+                                      "X": 4,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "5": {
+                                      "X": 5,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "6": {
+                                      "X": 6,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "7": {
+                                      "X": 7,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "8": {
+                                      "X": 8,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "9": {
+                                      "X": 9,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "10": {
+                                      "X": 10,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "11": {
+                                      "X": 11,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "12": {
+                                      "X": 12,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "13": {
+                                      "X": 13,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "14": {
+                                      "X": 14,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "15": {
+                                      "X": 15,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "16": {
+                                      "X": 16,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "17": {
+                                      "X": 17,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "18": {
+                                      "X": 18,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "19": {
+                                      "X": 19,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "20": {
+                                      "X": 20,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "21": {
+                                      "X": 21,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "22": {
+                                      "X": 22,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    },
+                                    "23": {
+                                      "X": 23,
+                                      "Y": 1,
+                                      "Color": "Transparent"
+                                    }
+                                  }
+                                },
+                                "FrameDuration": 400
+                              }
+                            ],
+                            "SelectedFrameId": "42cb2fa3-7b76-4c69-8db8-da298a8b9d30",
+                            "PenColor": "Yellow"
+                          },
+                          "StartPosition": 11,
+                          "ContainerId": "1e14a1c7-f865-4dfe-ba92-08f8cb7c1668",
+                          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.AnimationContainer",
+                          "Description": "Hand drawn animation/pattern copy",
+                          "IsEnabled": true
+                        }
+                      ],
+                      "StackLeftToRight": false,
+                      "StartPosition": 1,
+                      "ContainerId": "0a15ed3d-2ffb-420f-ae86-9a8e0dae6e26",
+                      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.GameCarSpeedLimiterGroupContainer",
+                      "Description": "Enable content when car speed limiter is ON",
+                      "IsEnabled": true
+                    },
+                    {
+                      "TriggerFormula": {
+                        "Expression": "[InputStatus.JoystickPlugin.GSI_X29_-_simOS_B06]=1"
+                      },
+                      "ClearBackgroundWhenActive": false,
+                      "LedContainers": [
+                        {
+                          "LedCount": 2,
+                          "Color": "Lime",
+                          "BlinkEnabled": false,
+                          "BlinkDelay": 500,
+                          "DualBlinkTimingEnabled": false,
+                          "OffDelay": 750,
+                          "OnDelay": 125,
+                          "StartPosition": 1,
+                          "ContainerId": "4707cd47-909f-4626-9c2f-c630f8f1f5df",
+                          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.StaticColorContainer",
+                          "Description": "Generates a static light effect",
+                          "IsEnabled": true
+                        }
+                      ],
+                      "StackLeftToRight": false,
+                      "StartPosition": 13,
+                      "ContainerId": "f43d87d0-e4cd-43a8-9122-6afba431c1b0",
+                      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+                      "Description": "Radio Active",
+                      "IsEnabled": true
+                    },
+                    {
+                      "TriggerFormula": {
+                        "Expression": "changed(1000, [InputStatus.JoystickPlugin.GSI_X29_-_simOS_B00])"
+                      },
+                      "ClearBackgroundWhenActive": false,
+                      "LedContainers": [
+                        {
+                          "Animation": {
+                            "Columns": 2,
+                            "Rows": 1,
+                            "TotalDuration": 1000,
+                            "Frames": [
+                              {
+                                "FrameId": "f865c38c-42ae-472f-96f1-67b7674c1a01",
+                                "Colors": {
+                                  "0": {
+                                    "0": {
+                                      "X": 0,
+                                      "Y": 0,
+                                      "Color": "White"
+                                    },
+                                    "1": {
+                                      "X": 1,
+                                      "Y": 0,
+                                      "Color": "White"
+                                    },
+                                    "2": {
+                                      "X": 2,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "3": {
+                                      "X": 3,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "4": {
+                                      "X": 4,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "5": {
+                                      "X": 5,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "6": {
+                                      "X": 6,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "7": {
+                                      "X": 7,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    }
+                                  }
+                                },
+                                "FrameDuration": 200
+                              },
+                              {
+                                "FrameId": "209fc7b6-1551-4ecf-9b65-5d392428da3e",
+                                "Colors": {
+                                  "0": {
+                                    "0": {
+                                      "X": 0,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "1": {
+                                      "X": 1,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "2": {
+                                      "X": 2,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "3": {
+                                      "X": 3,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "4": {
+                                      "X": 4,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "5": {
+                                      "X": 5,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "6": {
+                                      "X": 6,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "7": {
+                                      "X": 7,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    }
+                                  }
+                                },
+                                "FrameDuration": 200
+                              },
+                              {
+                                "FrameId": "50faf36c-38d3-42a3-9f5d-8502e9aed561",
+                                "Colors": {
+                                  "0": {
+                                    "0": {
+                                      "X": 0,
+                                      "Y": 0,
+                                      "Color": "White"
+                                    },
+                                    "1": {
+                                      "X": 1,
+                                      "Y": 0,
+                                      "Color": "White"
+                                    },
+                                    "2": {
+                                      "X": 2,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "3": {
+                                      "X": 3,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "4": {
+                                      "X": 4,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "5": {
+                                      "X": 5,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "6": {
+                                      "X": 6,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "7": {
+                                      "X": 7,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    }
+                                  }
+                                },
+                                "FrameDuration": 200
+                              },
+                              {
+                                "FrameId": "7215e7ec-ea8f-4a3c-9e42-251449c881d5",
+                                "Colors": {
+                                  "0": {
+                                    "0": {
+                                      "X": 0,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "1": {
+                                      "X": 1,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "2": {
+                                      "X": 2,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "3": {
+                                      "X": 3,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "4": {
+                                      "X": 4,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "5": {
+                                      "X": 5,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "6": {
+                                      "X": 6,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "7": {
+                                      "X": 7,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    }
+                                  }
+                                },
+                                "FrameDuration": 200
+                              },
+                              {
+                                "FrameId": "07e2f75f-06d1-4a6d-8a51-3f66278c37e5",
+                                "Colors": {
+                                  "0": {
+                                    "0": {
+                                      "X": 0,
+                                      "Y": 0,
+                                      "Color": "White"
+                                    },
+                                    "1": {
+                                      "X": 1,
+                                      "Y": 0,
+                                      "Color": "White"
+                                    },
+                                    "2": {
+                                      "X": 2,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "3": {
+                                      "X": 3,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "4": {
+                                      "X": 4,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "5": {
+                                      "X": 5,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "6": {
+                                      "X": 6,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    },
+                                    "7": {
+                                      "X": 7,
+                                      "Y": 0,
+                                      "Color": "Transparent"
+                                    }
+                                  }
+                                },
+                                "FrameDuration": 200
+                              }
+                            ],
+                            "SelectedFrameId": "07e2f75f-06d1-4a6d-8a51-3f66278c37e5",
+                            "PenColor": "White"
+                          },
+                          "StartPosition": 1,
+                          "ContainerId": "11cc2e79-cb75-42f9-a968-3c58a5956af3",
+                          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.AnimationContainer",
+                          "Description": "Hand drawn animation/pattern",
+                          "IsEnabled": true
+                        }
+                      ],
+                      "StackLeftToRight": false,
+                      "StartPosition": 1,
+                      "ContainerId": "120c7b3f-0f0c-44c5-b6cb-e5c003d45031",
+                      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+                      "Description": "Flash Lights",
+                      "IsEnabled": true
+                    },
+                    {
+                      "LedContainers": [
+                        {
+                          "TriggerFormula": {
+                            "Expression": "if([SpotterCarLeft]>0,1,0)"
+                          },
+                          "ClearBackgroundWhenActive": false,
+                          "LedContainers": [
+                            {
+                              "LedCount": 2,
+                              "Color": "Yellow",
+                              "BlinkEnabled": false,
+                              "BlinkDelay": 500,
+                              "DualBlinkTimingEnabled": true,
+                              "OffDelay": 100,
+                              "OnDelay": 200,
+                              "StartPosition": 7,
+                              "ContainerId": "fe7f9f12-589d-49d6-bc2c-6456e1780b3f",
+                              "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Status.SpotterCarLeftContainer",
+                              "Description": "LED 7&8 Yellow",
+                              "IsEnabled": true
+                            }
+                          ],
+                          "StackLeftToRight": false,
+                          "StartPosition": 1,
+                          "ContainerId": "0b7f48f7-6083-4b85-81fe-8ed47bff4cb3",
+                          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+                          "Description": "Spotter Left",
+                          "IsEnabled": true
+                        },
+                        {
+                          "TriggerFormula": {
+                            "Expression": "if([SpotterCarRight]>0,1,0)"
+                          },
+                          "ClearBackgroundWhenActive": false,
+                          "LedContainers": [
+                            {
+                              "LedCount": 2,
+                              "Color": "Yellow",
+                              "BlinkEnabled": false,
+                              "BlinkDelay": 500,
+                              "DualBlinkTimingEnabled": true,
+                              "OffDelay": 100,
+                              "OnDelay": 200,
+                              "StartPosition": 17,
+                              "ContainerId": "72cc10d1-6135-468f-bee2-f43c1dfb78e2",
+                              "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Status.SpotterCarRightContainer",
+                              "Description": "LED 17&18 Yellow",
+                              "IsEnabled": true
+                            }
+                          ],
+                          "StackLeftToRight": false,
+                          "StartPosition": 1,
+                          "ContainerId": "6d78f09e-7838-4b87-84fd-67c0e97fe59f",
+                          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+                          "Description": "Spotter Right",
+                          "IsEnabled": true
+                        }
+                      ],
+                      "StackLeftToRight": false,
+                      "StartPosition": 1,
+                      "ContainerId": "0730f4ed-b558-4d1f-860f-88a3d1be6c5f",
+                      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Base.GroupContainer",
+                      "Description": "Spotter L/R",
+                      "IsEnabled": true
+                    }
+                  ],
+                  "StackLeftToRight": false,
+                  "StartPosition": 1,
+                  "ContainerId": "9c7adc13-6394-4159-86a8-e6ddef3326ca",
+                  "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+                  "Description": "When Engine is Running",
+                  "IsEnabled": true
+                },
+                {
+                  "TriggerFormula": {
+                    "Expression": "if(([DataCorePlugin.CurrentGame]='IRacing'&&([EngineIgnitionOn]=1OR[EngineStarted]=1)),1,0)"
+                  },
+                  "ClearBackgroundWhenActive": false,
+                  "LedContainers": [
+                    {
+                      "TriggerFormula": {
+                        "Expression": "[IsInPitLane]&&[PitLimiterOn]=0"
+                      },
+                      "ClearBackgroundWhenActive": false,
+                      "LedContainers": [
+                        {
+                          "LedCount": 2,
+                          "Color": "Yellow",
+                          "BlinkEnabled": true,
+                          "BlinkDelay": 500,
+                          "DualBlinkTimingEnabled": false,
+                          "OffDelay": 750,
+                          "OnDelay": 125,
+                          "StartPosition": 11,
+                          "ContainerId": "c1ac6af8-b6ab-4f56-952b-eb6534aeb5ce",
+                          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.StaticColorContainer",
+                          "Description": "LED 11&12 Flash Yellow",
+                          "IsEnabled": true
+                        },
+                        {
+                          "LedCount": 2,
+                          "Color": "Yellow",
+                          "BlinkEnabled": true,
+                          "BlinkDelay": 500,
+                          "DualBlinkTimingEnabled": false,
+                          "OffDelay": 750,
+                          "OnDelay": 125,
+                          "StartPosition": 1,
+                          "ContainerId": "d72c22f7-e28f-4e13-8bd0-fe10392a06e3",
+                          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.StaticColorContainer",
+                          "Description": "LED 1&1 Flash Yellow",
+                          "IsEnabled": true
+                        }
+                      ],
+                      "StackLeftToRight": false,
+                      "StartPosition": 1,
+                      "ContainerId": "eb24c378-7252-4685-9713-10f35855c5b0",
+                      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+                      "Description": "Car is in Pit Lane",
+                      "IsEnabled": true
+                    }
+                  ],
+                  "StackLeftToRight": false,
+                  "StartPosition": 1,
+                  "ContainerId": "f02a4dfb-5d31-4691-8fda-d145977c9d3c",
+                  "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+                  "Description": "When Ignition on or Engine is started",
+                  "IsEnabled": true
+                }
+              ],
+              "StackLeftToRight": false,
+              "StartPosition": 1,
+              "ContainerId": "36084cdb-2cd3-4af8-b236-b83c5121a798",
+              "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+              "Description": "iRacing is Active",
+              "IsEnabled": true
+            }
+          ],
+          "StackLeftToRight": false,
+          "StartPosition": 1,
+          "ContainerId": "a5678eef-54f9-4aee-bd53-58aada4a5c04",
+          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Base.GroupContainer",
+          "Description": "iRacing Formulas",
+          "IsEnabled": true
+        },
+        {
+          "LedContainers": [
+            {
+              "TriggerFormula": {
+                "Expression": "[JoystickPlugin.GSI_X29_-_simOS_RY] > 1000"
+              },
+              "ClearBackgroundWhenActive": true,
+              "LedContainers": [
+                {
+                  "StartColor": "Magenta",
+                  "EndColor": "Magenta",
+                  "MaximumValue": 100.0,
+                  "MinimumValue": 0.0,
+                  "BlinkFormula": {
+                    "Expression": ""
+                  },
+                  "EnabledFormula": {
+                    "Expression": ""
+                  },
+                  "ValueFormula": {
+                    "Expression": "[JoystickPlugin.GSI_X29_-_simOS_RY]%1000/10"
+                  },
+                  "LedCount": 10,
+                  "RightToLeft": true,
+                  "GradientOnAll": false,
+                  "ClearWhenOut": false,
+                  "UseLedDimming": true,
+                  "FillAllLeds": false,
+                  "BlinkDelay": 500,
+                  "BlinkEnabled": false,
+                  "StartPosition": 1,
+                  "ContainerId": "8987f5c3-2822-45ca-9ad5-7264d77fd7e2",
+                  "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.CustomGradientContainer",
+                  "Description": "Clutch Bite Point Left",
+                  "IsEnabled": true
+                },
+                {
+                  "StartColor": "Magenta",
+                  "EndColor": "Magenta",
+                  "MaximumValue": 100.0,
+                  "MinimumValue": 0.0,
+                  "BlinkFormula": {
+                    "Expression": ""
+                  },
+                  "EnabledFormula": {
+                    "Expression": ""
+                  },
+                  "ValueFormula": {
+                    "Expression": "[JoystickPlugin.GSI_X29_-_simOS_RY]%1000/10"
+                  },
+                  "LedCount": 10,
+                  "RightToLeft": true,
+                  "GradientOnAll": false,
+                  "ClearWhenOut": false,
+                  "UseLedDimming": true,
+                  "FillAllLeds": false,
+                  "BlinkDelay": 500,
+                  "BlinkEnabled": false,
+                  "StartPosition": 11,
+                  "ContainerId": "4c13a3ac-c991-439b-b4aa-85c67b3dd34d",
+                  "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.CustomGradientContainer",
+                  "Description": "Clutch Bite Point Right",
+                  "IsEnabled": true
+                }
+              ],
+              "StackLeftToRight": false,
+              "StartPosition": 1,
+              "ContainerId": "3a49aa23-d7ba-4ec3-86d5-3be296927847",
+              "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+              "Description": "Enable content based on a custom formula",
+              "IsEnabled": true
+            }
+          ],
+          "StackLeftToRight": false,
+          "StartPosition": 1,
+          "ContainerId": "d172a25c-988e-4200-9ba6-7865cbd8694b",
+          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Base.GroupContainer",
+          "Description": "Standard Wheel Lights",
+          "IsEnabled": true
+        },
+        {
+          "LedContainers": [
+            {
+              "TriggerFormula": {
+                "Expression": "if([SpotterCarLeft]>0,1,0)"
+              },
+              "ClearBackgroundWhenActive": false,
+              "LedContainers": [
+                {
+                  "Animation": {
+                    "Columns": 10,
+                    "Rows": 1,
+                    "TotalDuration": 200,
+                    "Frames": [
+                      {
+                        "FrameId": "2848a52f-da94-4668-8000-5beecfabb183",
+                        "Colors": {
+                          "0": {
+                            "0": {
+                              "X": 0,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "1": {
+                              "X": 1,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "2": {
+                              "X": 2,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "3": {
+                              "X": 3,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "4": {
+                              "X": 4,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "5": {
+                              "X": 5,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "6": {
+                              "X": 6,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "7": {
+                              "X": 7,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "8": {
+                              "X": 8,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "9": {
+                              "X": 9,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            }
+                          }
+                        },
+                        "FrameDuration": 100
+                      },
+                      {
+                        "FrameId": "b439dbc9-78c8-486c-afd8-2bebca29516e",
+                        "Colors": {
+                          "0": {
+                            "0": {
+                              "X": 0,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "1": {
+                              "X": 1,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "2": {
+                              "X": 2,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "3": {
+                              "X": 3,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "4": {
+                              "X": 4,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "5": {
+                              "X": 5,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "6": {
+                              "X": 6,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "7": {
+                              "X": 7,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "8": {
+                              "X": 8,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "9": {
+                              "X": 9,
+                              "Y": 0,
+                              "Color": "Black"
+                            }
+                          }
+                        },
+                        "FrameDuration": 100
+                      }
+                    ],
+                    "SelectedFrameId": "b439dbc9-78c8-486c-afd8-2bebca29516e",
+                    "PenColor": "Black"
+                  },
+                  "StartPosition": 1,
+                  "ContainerId": "cdcfe577-3f4c-494f-a2be-48dae4d1e3b3",
+                  "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.AnimationContainer",
+                  "Description": "Hand drawn animation/pattern",
+                  "IsEnabled": true
+                }
+              ],
+              "StackLeftToRight": false,
+              "StartPosition": 1,
+              "ContainerId": "0b7f48f7-6083-4b85-81fe-8ed47bff4cb3",
+              "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+              "Description": "Spotter Left",
+              "IsEnabled": true
+            },
+            {
+              "TriggerFormula": {
+                "Expression": "if([SpotterCarRight]>0,1,0)"
+              },
+              "ClearBackgroundWhenActive": false,
+              "LedContainers": [
+                {
+                  "Animation": {
+                    "Columns": 10,
+                    "Rows": 1,
+                    "TotalDuration": 200,
+                    "Frames": [
+                      {
+                        "FrameId": "2848a52f-da94-4668-8000-5beecfabb183",
+                        "Colors": {
+                          "0": {
+                            "0": {
+                              "X": 0,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "1": {
+                              "X": 1,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "2": {
+                              "X": 2,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "3": {
+                              "X": 3,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "4": {
+                              "X": 4,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "5": {
+                              "X": 5,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "6": {
+                              "X": 6,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "7": {
+                              "X": 7,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "8": {
+                              "X": 8,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            },
+                            "9": {
+                              "X": 9,
+                              "Y": 0,
+                              "Color": "Yellow"
+                            }
+                          }
+                        },
+                        "FrameDuration": 100
+                      },
+                      {
+                        "FrameId": "b439dbc9-78c8-486c-afd8-2bebca29516e",
+                        "Colors": {
+                          "0": {
+                            "0": {
+                              "X": 0,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "1": {
+                              "X": 1,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "2": {
+                              "X": 2,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "3": {
+                              "X": 3,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "4": {
+                              "X": 4,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "5": {
+                              "X": 5,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "6": {
+                              "X": 6,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "7": {
+                              "X": 7,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "8": {
+                              "X": 8,
+                              "Y": 0,
+                              "Color": "Black"
+                            },
+                            "9": {
+                              "X": 9,
+                              "Y": 0,
+                              "Color": "Black"
+                            }
+                          }
+                        },
+                        "FrameDuration": 100
+                      }
+                    ],
+                    "SelectedFrameId": "b439dbc9-78c8-486c-afd8-2bebca29516e",
+                    "PenColor": "Black"
+                  },
+                  "StartPosition": 11,
+                  "ContainerId": "cdcfe577-3f4c-494f-a2be-48dae4d1e3b3",
+                  "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.AnimationContainer",
+                  "Description": "Hand drawn animation/pattern",
+                  "IsEnabled": true
+                }
+              ],
+              "StackLeftToRight": false,
+              "StartPosition": 1,
+              "ContainerId": "6d78f09e-7838-4b87-84fd-67c0e97fe59f",
+              "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.CustomConditionalGroupContainer",
+              "Description": "Spotter Right",
+              "IsEnabled": true
+            }
+          ],
+          "StackLeftToRight": false,
+          "StartPosition": 1,
+          "ContainerId": "c86dec79-bdca-4549-9ee7-dd1479e9cb20",
+          "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Base.GroupContainer",
+          "Description": "Spotter L/R",
+          "IsEnabled": true
+        }
+      ],
+      "StackLeftToRight": false,
+      "StartPosition": 1,
+      "ContainerId": "3d13704c-2b2d-4bcb-bc7b-0d81ebe67954",
+      "ContainerType": "SimHub.Plugins.DataPlugins.RGBDriver.LedsContainers.Groups.GameRunningGroupContainer",
+      "Description": "Enable content if the game is running",
+      "IsEnabled": true
+    }
+  ],
+  "GlobalBrightness": 50.0,
+  "UseProfileBrightness": false,
+  "LastLoaded": "2023-12-02T13:48:30.817798+02:00",
+  "Description": "GSI X-29 Wheel led profile tuned to my preference.",
+  "Name": "X-29 RameX Racing",
+  "ProfileId": "383606f6-18eb-4602-8642-81a8c10d05aa",
+  "GameCode": "IRacing"
+}
